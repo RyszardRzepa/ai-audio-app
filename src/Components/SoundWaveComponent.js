@@ -13,16 +13,19 @@ class SoundWaveComponent extends Component {
     this.handleTogglePlay = this.handleTogglePlay.bind(this);
     this.handlePosChange = this.handlePosChange.bind(this);
   }
+
   handleTogglePlay() {
     this.setState({
       playing: !this.state.playing
     });
   }
+
   handlePosChange(e) {
     this.setState({
       pos: e.originalArgs[0]
     });
   }
+
   render() {
     return (
       <div className="SoundWaveComponent">

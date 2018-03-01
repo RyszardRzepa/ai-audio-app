@@ -31,7 +31,18 @@ class App extends Component {
           </div>
         </div>
 
-        <ChannelComponent/>
+        <div className="channels">
+          <ChannelComponent />
+          <ChannelComponent />
+          <ChannelComponent />
+          <ChannelComponent />
+          <ChannelComponent />
+          <ChannelComponent />
+          <ChannelComponent />
+          <ChannelComponent />
+          <ChannelComponent />
+          <ChannelComponent/>
+        </div>
 
       </div>
     );

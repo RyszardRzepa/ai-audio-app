@@ -1,5 +1,7 @@
 # AI Sound Engineer Front End
+Simula Hack with Mettle Studio. 
 
+Breif: AI Sound Engineer
 
 ## Colour Scheme:
 - Light Grey: #6A6A6A

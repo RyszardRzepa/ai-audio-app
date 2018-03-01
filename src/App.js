@@ -13,18 +13,32 @@ const colors = {
 };
 
 class App extends Component {
+  state = {
+    play: false,
+  };
+
+  onPlay = () => {
+    this.setState({ play: !this.state.play })
+  };
+
+  onStop = () => {
+    this.setState({ play: !this.state.play })
+  };
+
   render() {
     return (
       <div className="App">
+        <HeaderCompoent onStop={this.onStop} onPlay={this.onPlay} />
         <div>
           <SoundWaveComponent
-            style={{ position: 'relative', top: 0 }}
+            play={this.state.play}
             waveColor={colors.waveColor1}
             progressColor='transparent'
             cursorColor='transparent'
             url='https://wavesurfer-js.org/example/split-channels/stereo.mp3'/>
-          <div style={{ position: 'absolute', top: 0, left: 0, right: 0 }}>
+          <div style={{ position: 'absolute', width: '100%', top: 100}}>
             <SoundWaveComponent
+              play={this.state.play}
               waveColor={colors.waveColor1}
               progressColor={colors.waveColor2}
               cursorColor={colors.cursorColor}

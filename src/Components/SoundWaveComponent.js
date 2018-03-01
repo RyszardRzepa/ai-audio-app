@@ -32,7 +32,7 @@ class SoundWaveComponent extends Component {
         <div style={{ width: '100%', height: '10%', backgroundColor: '#4a4a4a' }}>
           <Wavesurfer
             options={{
-              height: 200,
+              height: 150,
               waveColor: this.props.waveColor,
               progressColor: this.props.progressColor,
               cursorColor: this.props.cursorColor
@@ -40,11 +40,9 @@ class SoundWaveComponent extends Component {
             audioFile={this.props.url}
             pos={this.state.pos}
             onPosChange={this.handlePosChange}
-            playing={this.state.playing}
+            playing={this.props.play}
           />
         </div>
-        <button onClick={() => this.setState({ playing: true })} type="button">Play</button>
-        <button onClick={() => this.setState({ playing: false })} type="button">Stop</button>
       </div>
     );
   }

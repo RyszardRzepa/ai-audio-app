@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import 'wavesurfer.js';
 
+import HeaderCompoent from './Components/headerComponent';
 import SoundWaveComponent from './Components/SoundWaveComponent';
 import ChannelComponent from './Components/ChannelComponent';
 

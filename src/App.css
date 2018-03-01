@@ -1,5 +1,4 @@
 .App {
-  background-color: #6a6a6a;
   text-align: center;
 }
 
@@ -8,6 +7,10 @@
   height: 80px;
 }
 
+.soundWave {
+  height: 1000px;
+  background-color: #6a6a6a;
+}
 .App-header {
   background-color: #222;
   height: 150px;
@@ -26,4 +29,24 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.rightButton {
+  width: 67px;
+  background-color: #dadada;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.leftButton {
+  width: 67px;
+  background-color: #858585;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
 }

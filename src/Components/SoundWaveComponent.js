@@ -25,7 +25,7 @@ class SoundWaveComponent extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div className="SoundWaveComponent">
         <div style={{ width: '100%', height: '10%', backgroundColor: '#4a4a4a' }}>
           <Wavesurfer
             options={{

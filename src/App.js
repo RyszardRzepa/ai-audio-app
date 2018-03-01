@@ -3,12 +3,12 @@ import './App.css';
 import 'wavesurfer.js';
 
 import SoundWaveComponent from './Components/SoundWaveComponent';
+import ChannelComponent from './Components/ChannelComponent';
 
 const colors = {
   waveColor1: '#6a6a6a',
   waveColor2: '#7a59af',
   cursorColor: '#759bff'
-
 };
 
 class App extends Component {
@@ -30,6 +30,9 @@ class App extends Component {
               url='https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3'/>
           </div>
         </div>
+
+        <ChannelComponent/>
+
       </div>
     );
   }

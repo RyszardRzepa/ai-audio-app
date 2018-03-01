@@ -40,8 +40,6 @@ class SoundWaveComponent extends Component {
             playing={this.state.playing}
           />
         </div>
-        <button onClick={() => this.setState({ playing: true })} type="button">Play</button>
-        <button onClick={() => this.setState({ playing: false })} type="button">Stop</button>
       </div>
     );
   }

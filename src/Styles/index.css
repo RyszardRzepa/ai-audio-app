@@ -4,6 +4,7 @@ body, html {
     font-family: sans-serif;
     height: 100%;
     background: #6A6A6A;
+    overflow: hidden;
 }
 
 .channels {
@@ -12,18 +13,29 @@ body, html {
     justify-content: space-around;
 }
 
-.view_button{
-
-}
-.toggle_on_off_button{
-    
+.toggle_on_off_button, .view_button {
+    margin: 1em 0;
+    width: 91px;
+    height: 50px;
+    background: #4A4A4A;
+    color: #D8D8D8;
+    border: none;
+    border-radius: 5px;
 }
 
 .ChannelComponent {
-    position: relative;
+    width: 91px;
+    height: 680px;
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+}
+
+.slider {
+    flex: 1;
     width: 91px;
     position: relative;
-    height: 562px;
+    height: 0;
     background: #4A4A4A;
     border-radius: 4px;
 }

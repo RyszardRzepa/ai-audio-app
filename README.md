@@ -10,4 +10,4 @@
 Design Screenshots:
 
 ![Channels](https://github.com/RyszardRzepa/ai-audio-app/blob/giovanni/Design/Channels.svg)
-![Channel Detail](https://github.com/RyszardRzepa/ai-audio-app/blob/giovanni/Design/Channel%20Detail.png)
+![Channel Detail](https://github.com/RyszardRzepa/ai-audio-app/blob/giovanni/Design/Channel%20Detail.svg)

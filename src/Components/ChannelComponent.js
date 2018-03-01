@@ -38,9 +38,14 @@ class ChannelComponent extends Component {
                         onChange={(v) => this.setState({ value: v.target.value})} />
                 </div>
 
-                <button className="toggle_on_off_button"> 
+                <button className="toggle_on_off_button" onClick={() => this.setState({ status: !this.state.status })}> 
                     { input }
-                    <div className="indicator"></div>
+
+                    {this.state.status ?
+                        <div className="indicator on"></div>
+                    :
+                        <div className="indicator off"></div>
+                    }
                 </button>
             </div>
         );

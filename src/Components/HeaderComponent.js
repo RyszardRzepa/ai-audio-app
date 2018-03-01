@@ -8,6 +8,7 @@ import FaIconPackFace from 'react-icons/lib/md/face'
 class HeaderComonent extends React.Component {
   state = {
     play: false,
+    original: true
   };
 
   render() {
@@ -40,12 +41,18 @@ class HeaderComonent extends React.Component {
             borderRadius: 5,
             cursor: 'pointer'
           }}>
-            <div className='rightButton'>
+
+            <div 
+              className={'rightButton ' + (this.state.original ? 'selected' : '')}
+              onClick={() => this.setState({original: true})}>
               Original
             </div>
-            <div className='leftButton'>
+            <div 
+              className={'leftButton ' + (this.state.original ? '' : 'selected')}
+              onClick={() => this.setState({original: false})}>
               Mixed
             </div>
+
           </div>
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingRight: 10 }}>

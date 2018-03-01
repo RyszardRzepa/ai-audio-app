@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Wavesurfer from 'react-wavesurfer';
 import 'wavesurfer.js';
 
-class App extends Component {
+class SoundWaveComponent extends Component {
   constructor(props) {
     super(props);
 
@@ -53,4 +53,4 @@ class App extends Component {
 }
 
 
-export default App;
+export default SoundWaveComponent;

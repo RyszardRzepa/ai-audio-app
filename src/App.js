@@ -21,13 +21,13 @@ class App extends Component {
             waveColor={colors.waveColor1}
             progressColor='transparent'
             cursorColor='transparent'
-            url='https://wavesurfer-js.org/example/split-channels/stereo.mp3'/>
+            url='https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3'/>
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0 }}>
             <SoundWaveComponent
               waveColor={colors.waveColor1}
               progressColor={colors.waveColor2}
               cursorColor={colors.cursorColor}
-              url='https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3'/>
+              url='https://wavesurfer-js.org/example/split-channels/stereo.mp3'/>
           </div>
         </div>
 

@@ -12,6 +12,13 @@ body, html {
     justify-content: space-around;
 }
 
+.view_button{
+
+}
+.toggle_on_off_button{
+    
+}
+
 .ChannelComponent {
     position: relative;
     width: 91px;

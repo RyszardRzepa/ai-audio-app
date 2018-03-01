@@ -1,47 +1,35 @@
 import React, { Component } from 'react';
-import Wavesurfer from 'react-wavesurfer';
-import logo from './logo.svg';
 import './App.css';
 import 'wavesurfer.js';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+import SoundWaveComponent from './Components/SoundWaveComponent';
 
-    this.state = {
-      playing: false,
-      pos: 0
-    };
-    this.handleTogglePlay = this.handleTogglePlay.bind(this);
-    this.handlePosChange = this.handlePosChange.bind(this);
-  }
-  handleTogglePlay() {
-    this.setState({
-      playing: !this.state.playing
-    });
-  }
-  handlePosChange(e) {
-    this.setState({
-      pos: e.originalArgs[0]
-    });
-  }
+const colors = {
+  waveColor1: '#6a6a6a',
+  waveColor2: '#7a59af',
+  cursorColor: '#759bff'
+
+};
+
+class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
         <div>
-          <Wavesurfer
-            audioFile='https://wavesurfer-js.org/example/split-channels/stereo.mp3'
-            pos={this.state.pos}
-            onPosChange={this.handlePosChange}
-            playing={this.state.playing}
-          />
+          <SoundWaveComponent
+            style={{ position: 'relative', top: 0 }}
+            waveColor={colors.waveColor1}
+            progressColor='transparent'
+            cursorColor='transparent'
+            url='https://wavesurfer-js.org/example/split-channels/stereo.mp3'/>
+          <div style={{ position: 'absolute', top: 0, left: 0, right: 0 }}>
+            <SoundWaveComponent
+              waveColor={colors.waveColor1}
+              progressColor={colors.waveColor2}
+              cursorColor={colors.cursorColor}
+              url='https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3'/>
+          </div>
         </div>
-        <button onClick={() => this.setState({ playing: true })} type="button">Play</button>
-        <button onClick={() => this.setState({ playing: false })} type="button">Stop</button>
       </div>
     );
   }

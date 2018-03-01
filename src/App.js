@@ -48,16 +48,17 @@ class App extends Component {
         </div>
 
         <div className="channels">
-          <ChannelComponent />
-          <ChannelComponent />
-          <ChannelComponent />
-          <ChannelComponent />
-          <ChannelComponent />
-          <ChannelComponent />
-          <ChannelComponent />
-          <ChannelComponent />
-          <ChannelComponent />
-          <ChannelComponent/>
+          <ChannelComponent channel = { 1 }/>
+          <ChannelComponent channel = { 2 }/>
+          <ChannelComponent channel = { 3 }/>
+          <ChannelComponent channel = { 4 }/>
+          <ChannelComponent channel = { 5 }/>
+          <ChannelComponent channel = { 6 }/>
+          <ChannelComponent channel = { 7 }/>
+          <ChannelComponent channel = { 8 }/>
+          <ChannelComponent channel = { 9 }/>
+          <ChannelComponent channel = { 10 }/>
+          
         </div>
 
       </div>

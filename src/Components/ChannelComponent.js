@@ -3,6 +3,8 @@ import FaIconPackRemoveRedEye from 'react-icons/lib/md/remove-red-eye'
 
 class ChannelComponent extends Component {
     render() {
+        let { channel } = this.props;
+
         return (
             <div className="ChannelComponent">
                 <button className="view_button">
@@ -15,6 +17,9 @@ class ChannelComponent extends Component {
                 </button>
                 
                 <div className="slider">
+                    <div className="channel_number">
+                        {channel}
+                    </div>
                     <input type="range" className="slider" />
                 </div>
 

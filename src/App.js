@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import 'wavesurfer.js';
 
-import HeaderCompoent from './Components/headerComponent';
+import HeaderComponent from './Components/HeaderComponent';
 import SoundWaveComponent from './Components/SoundWaveComponent';
 import ChannelComponent from './Components/ChannelComponent';
 
@@ -16,6 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <HeaderComponent/>
         <div>
           <SoundWaveComponent
             style={{ position: 'relative', top: 0 }}
@@ -23,7 +24,7 @@ class App extends Component {
             progressColor='transparent'
             cursorColor='transparent'
             url='https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3'/>
-          <div style={{ position: 'absolute', top: 0, left: 0, right: 0 }}>
+          <div style={{ position: 'absolute', top: 100, left: 0, right: 0 }}>
             <SoundWaveComponent
               waveColor={colors.waveColor1}
               progressColor={colors.waveColor2}

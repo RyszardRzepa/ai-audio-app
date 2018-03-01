@@ -6,7 +6,8 @@ class ChannelComponent extends Component {
     constructor(props){
         super(props);
         this.state = {
-            value: props.value
+            value: props.value,
+            status: props.status
         }
     }
 
@@ -15,7 +16,7 @@ class ChannelComponent extends Component {
         let { value } = this.state;
 
         return (
-            <div className="ChannelComponent">
+            <div className="channel_component">
                 <button className="view_button">
                     <FaIconPackRemoveRedEye
                     style={{

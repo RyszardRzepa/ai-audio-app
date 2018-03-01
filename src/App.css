@@ -58,7 +58,15 @@ button:focus {
     background: #97424C;
 }
 
-.ChannelComponent {
+.channel_component {
+    width: 91px;
+    height: 600px;
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+}
+
+.compressor_slider_component {
     width: 91px;
     height: 600px;
     display: flex;
@@ -84,6 +92,17 @@ button:focus {
     color: #7A59AF;
 }
 
+.menu_icon {
+    font-size: 25px;
+    padding: 10px;
+    color: #858585;
+    cursor: pointer;
+}
+
+.selected_play_option {
+    color: #7a59af;
+}
+
 input[type=range] {
     -webkit-appearance: none;
     transform: rotate(270deg);
@@ -92,6 +111,12 @@ input[type=range] {
     margin-left: -170%;
     margin-top: 234%;
     width: 400px;
+}
+
+.compressor_slider_input {
+    margin-left: -95% !important;
+    margin-top: 160% !important;
+    width: 260px !important;
 }
 
 input[type=range]::-webkit-slider-runnable-track {

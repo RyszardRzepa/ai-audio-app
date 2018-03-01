@@ -30,3 +30,23 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.rightButton {
+  width: 67px;
+  background-color: #dadada;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.leftButton {
+  width: 67px;
+  background-color: #858585;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}

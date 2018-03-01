@@ -25,6 +25,22 @@ body, html {
     color: #D8D8D8;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle_on_off_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5em;
+}
+
+.indicator {
+    height: 8px;
+    border-radius: 5px;
+    background: #669866;
+    width: 80px;
 }
 
 .ChannelComponent {
@@ -47,6 +63,10 @@ body, html {
 .channel_number {
     color: #929292;
     padding-top: 1em;
+}
+
+.button:hover {
+    color: #7A59AF;
 }
 
 input[type=range] {

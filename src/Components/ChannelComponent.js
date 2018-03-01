@@ -2,8 +2,17 @@ import React, { Component } from 'react';
 import FaIconPackRemoveRedEye from 'react-icons/lib/md/remove-red-eye'
 
 class ChannelComponent extends Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            value: props.value
+        }
+    }
+
     render() {
-        let { channel } = this.props;
+        let { channel, input, min, max } = this.props;
+        let { value } = this.state;
 
         return (
             <div className="ChannelComponent">
@@ -20,10 +29,19 @@ class ChannelComponent extends Component {
                     <div className="channel_number">
                         {channel}
                     </div>
-                    <input type="range" className="slider" />
+                    <input 
+                        type="range"
+                        min = { min }
+                        max = { max }
+                        value = { value }
+                        className="slider"
+                        onChange={(v) => this.setState({ value: v.target.value})} />
                 </div>
 
-                <button className="toggle_on_off_button">test</button>
+                <button className="toggle_on_off_button"> 
+                    { input }
+                    <div className="indicator"></div>
+                </button>
             </div>
         );
     }

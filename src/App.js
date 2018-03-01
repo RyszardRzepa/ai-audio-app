@@ -48,16 +48,76 @@ class App extends Component {
         </div>
 
         <div className="channels">
-          <ChannelComponent channel = { 1 }/>
-          <ChannelComponent channel = { 2 }/>
-          <ChannelComponent channel = { 3 }/>
-          <ChannelComponent channel = { 4 }/>
-          <ChannelComponent channel = { 5 }/>
-          <ChannelComponent channel = { 6 }/>
-          <ChannelComponent channel = { 7 }/>
-          <ChannelComponent channel = { 8 }/>
-          <ChannelComponent channel = { 9 }/>
-          <ChannelComponent channel = { 10 }/>
+          <ChannelComponent 
+            channel = { 1 } 
+            input = "Snare Drum"
+            min = { 0 }
+            max = { 100 }
+            step="1"
+            value = { 70 }/>
+          <ChannelComponent 
+            channel = { 2 } 
+            input = "Snare Drum"
+            min = { 0 }
+            max = { 100 }
+            step="1"
+            value = { 80 }/>
+          <ChannelComponent 
+            channel = { 3 } 
+            input = "Hi Hat"
+            min = { 0 }
+            max = { 100 }
+            step="1"
+            value = { 50 }/>
+          <ChannelComponent 
+            channel = { 4 } 
+            input = "Tom Drum"
+            min = { 0 }
+            max = { 100 }
+            step="1"
+            value = { 10 }/>
+          <ChannelComponent 
+            channel = { 5 } 
+            input = "Kick Drum"
+            min = { 0 }
+            max = { 100 }
+            step="1"
+            value = { 30 }/>
+          <ChannelComponent 
+            channel = { 6 } 
+            input = "Ride Cymbal"
+            min = { 0 }
+            max = { 100 }
+            step="1"
+            value = { 40 }/>
+          <ChannelComponent 
+            channel = { 7 } 
+            input = "Crash Cymbal"
+            min = { 0 }
+            max = { 100 }
+            step="1"
+            value = { 30 }/>
+          <ChannelComponent 
+            channel = { 8 } 
+            input = "Cowbell"
+            min = { 0 }
+            max = { 100 }
+            step="1"
+            value = { 100 }/>
+          <ChannelComponent 
+            channel = { 9 } 
+            input = "Off"
+            min = { 0 }
+            max = { 100 }
+            step="1"
+            value = { 0 }/>
+          <ChannelComponent 
+            channel = { 10 } 
+            input = "Off"
+            min = { 0 }
+            max = { 100 }
+            step="1"
+            value = { 0 }/>
           
         </div>
 

@@ -197,14 +197,19 @@ input[type=range]:focus {
 }
 
 .chart2 {
-    margin-left: 45px;
-    margin-top: -53px;
-    -webkit-transform: rotate(180deg); /*for Chrome and Safari */
-    -ms-transform: rotate(180deg); /*for IE9*/
-    -moz-transform: rotate(180deg); /*for Firefox*/
-    -o-transform: rotate(180deg); /*for Opera*/
+  margin-top: -53px;
+  -webkit-transform:rotate(180deg);/*for Chrome and Safari */
+  -ms-transform:rotate(180deg);/*for IE9*/
+  -moz-transform:rotate(180deg);/*for Firefox*/
+  -o-transform:rotate(180deg);/*for Opera*/
 }
 
+
+.chartNumber {
+    color: #fff;
+    font-size: 14px;
+    padding-top: 4px;
+}
 .channel-detail {
     display: flex;
     margin: 1em;

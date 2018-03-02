@@ -32,9 +32,11 @@ class DetailComponent extends React.Component {
 
     return (
       <div className="channel-detail">
-        <WaveHeadComponent
-          playOriginal={this.state.playOriginal}
-          playMixed={this.state.playMixed} />
+        <div style={{ backgroundColor: 'red'}}>
+          <WaveHeadComponent
+            playOriginal={this.state.playOriginal}
+            playMixed={this.state.playMixed}/>
+        </div>
 
         <div className="channel-volume">
           <ChannelComponent
@@ -54,7 +56,7 @@ class DetailComponent extends React.Component {
           </div>
 
           <div className="compression">
-            <CompressorComponent />
+            <CompressorComponent/>
           </div>
         </div>
       </div>

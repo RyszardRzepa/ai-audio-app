@@ -2,6 +2,7 @@ import React from 'react';
 import ChartComponent from './ChartComponent';
 import ChannelComponent from './ChannelComponent';
 import CompressorComponent from './CompressorComponent';
+import WaveHeadComponent from './WaveHeadComponent';
 
 class DetailComponent extends React.Component {
   constructor(props) {
@@ -19,7 +20,9 @@ class DetailComponent extends React.Component {
       volume: urlVolume,
       channel: urlID,
       input: urlInput,
-      status: (urlStatus === 'true')
+      status: (urlStatus === 'true'),
+      playOriginal: props.playOriginal,
+      playMixed: props.playMixed
     }
   }
 
@@ -29,6 +32,10 @@ class DetailComponent extends React.Component {
 
     return (
       <div className="channel-detail">
+        <WaveHeadComponent
+          playOriginal={this.state.playOriginal}
+          playMixed={this.state.playMixed} />
+
         <div className="channel-volume">
           <ChannelComponent
             channel={channel}
@@ -43,13 +50,12 @@ class DetailComponent extends React.Component {
 
         <div className="eq-compression">
           <div className="eq">
-            <ChartComponent/>
+            <ChartComponent channel={channel}/>
           </div>
 
           <div className="compression">
-
+            <CompressorComponent />
           </div>
-          <CompressorComponent/>
         </div>
       </div>
     )

@@ -72,7 +72,6 @@ button:focus {
 
 .compressor_slider_component {
     width: 91px;
-    height: 600px;
     display: flex;
     align-content: space-between;
     flex-direction: column;
@@ -197,22 +196,23 @@ input[type=range]:focus {
 }
 
 .chart2 {
-  margin-top: -53px;
-  -webkit-transform:rotate(180deg);/*for Chrome and Safari */
-  -ms-transform:rotate(180deg);/*for IE9*/
-  -moz-transform:rotate(180deg);/*for Firefox*/
-  -o-transform:rotate(180deg);/*for Opera*/
+    margin-top: -53px;
+    -webkit-transform: rotate(180deg); /*for Chrome and Safari */
+    -ms-transform: rotate(180deg); /*for IE9*/
+    -moz-transform: rotate(180deg); /*for Firefox*/
+    -o-transform: rotate(180deg); /*for Opera*/
 }
-
 
 .chartNumber {
     color: #fff;
     font-size: 14px;
     padding-top: 4px;
 }
+
 .channel-detail {
     display: flex;
     margin: 1em;
+    margin-top: 10em;
 }
 
 .eq-compression {
@@ -224,9 +224,28 @@ input[type=range]:focus {
 .eq {
     background: #4a4a4a;
     margin: 1em;
+    border-radius: 5px;
 }
 
-compression {
+.compression {
     background: #4a4a4a;
     margin: 1em;
+    border-radius: 5px;
+}
+
+.charts {
+    width: 100%;
+}
+
+.yAxis {
+    display: flex;
+}
+
+.channel-volume {
+    margin-top: 1em;
+}
+
+.compressor_channels{
+    display: flex;
+    flex-direction: row;
 }

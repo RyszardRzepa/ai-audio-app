@@ -1,54 +1,66 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
 }
 
 .soundWave {
-  height: 1000px;
-  background-color: #6a6a6a;
+    height: 1000px;
+    background-color: #6a6a6a;
 }
+
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .App-intro {
-  font-size: large;
+    font-size: large;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .rightButton {
-  width: 67px;
-  background-color: #dadada;
-  align-items: center;
-  justify-items: center;
-  text-align: center;
-  padding: 10px;
-  border-radius: 5px;
+    width: 67px;
+    background-color: #dadada;
+    align-items: center;
+    color: #4A4A4A;
+    font-size: 13px;
+    line-height: 17px;
+    justify-items: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .leftButton {
-  width: 67px;
-  background-color: #858585;
-  align-items: center;
-  justify-items: center;
-  text-align: center;
-  padding: 10px;
-  border-radius: 5px;
+    width: 67px;
+    background-color: #858585;
+    align-items: center;
+    justify-items: center;
+    color: #4A4A4A;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .chart2 {

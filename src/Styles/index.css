@@ -25,6 +25,22 @@ body, html {
     color: #D8D8D8;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle_on_off_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5em;
+}
+
+.indicator {
+    height: 8px;
+    border-radius: 5px;
+    background: #669866;
+    width: 80px;
 }
 
 .ChannelComponent {
@@ -44,14 +60,23 @@ body, html {
     border-radius: 4px;
 }
 
+.channel_number {
+    color: #929292;
+    padding-top: 1em;
+}
+
+.button:hover {
+    color: #7A59AF;
+}
+
 input[type=range] {
     -webkit-appearance: none;
     transform: rotate(270deg);
     -moz-transform: rotate(270deg);
     background: transparent;
-    margin-left: -186%;
-    margin-top: 255%;
-    width: 430px;
+    margin-left: -170%;
+    margin-top: 234%;
+    width: 400px;
 }
 
 input[type=range]::-webkit-slider-runnable-track {

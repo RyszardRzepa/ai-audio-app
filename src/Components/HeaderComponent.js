@@ -28,7 +28,7 @@ class HeaderComonent extends React.Component {
                 fontSize: 35,
                 color: '#858585'
               }}/>
-            <p style={{ color: '#858585', paddingRight: 5 }}>Hye, I see the input genre is</p> <p
+            <p style={{ color: '#858585', paddingRight: 5 }}>Hey, I see the input genre is</p> <p
             style={{ color: '#adadad', fontWeight: 'bold' }}> Rock</p>
           </div>
           <div style={{
@@ -37,7 +37,8 @@ class HeaderComonent extends React.Component {
             backgroundColor: '#858585',
             width: 147,
             margin: 20,
-            borderRadius: 5
+            borderRadius: 5,
+            cursor: 'pointer'
           }}>
             <div className='rightButton'>
               Original
@@ -49,19 +50,17 @@ class HeaderComonent extends React.Component {
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingRight: 10 }}>
           <FaIconPack
+            className="button"
             onClick={() => this.props.onPlay(!this.state.play)}
             style={{
               padding: 10,
               fontSize: 30,
-              color: '#7a59af'
+              color: '#7a59af',
+              cursor: 'pointer'
             }}/>
-          <FaIconPackPause  onClick={() => this.props.onPlay(!this.state.play)} style={styles.iconStyle}/>
-          <FaIconPackSquare style={styles.iconStyle}/>
-          <FaIconPackFolder style={{
-            padding: 10,
-            fontSize: 35,
-            color: '#858585'
-          }}/>
+          <FaIconPackPause className="button"  style={styles.iconStyle}onClick={() => this.props.onPlay(!this.state.play)}/>
+          <FaIconPackSquare className="button" style={styles.iconStyle} />
+          <FaIconPackFolder className="button" style={styles.iconStyle}/>
         </div>
       </div>
     )
@@ -72,7 +71,8 @@ const styles = {
   iconStyle: {
     padding: 10,
     fontSize: 30,
-    color: '#858585'
+    color: '#858585',
+    cursor: 'pointer'
   }
 };
 

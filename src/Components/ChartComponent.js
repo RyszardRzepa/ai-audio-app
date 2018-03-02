@@ -44,7 +44,7 @@ export default class ChartComponent extends React.Component {
     return (
       <div>
         <div>
-          <div style={{ height: 450, width: 50, position: 'absolute', left: 370 }}>
+          <div style={{ height: 450, width: 50, position: 'absolute', left: '23%' }}>
             <p className='chartNumber'>+30</p>
             <p className='chartNumber'>+25</p>
             <p className='chartNumber'>+20</p>

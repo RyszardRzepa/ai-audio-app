@@ -55,7 +55,7 @@ class App extends Component {
 
             <Route
               exact
-              path='/channel'
+              path='/channel/:id/:input/:volume/:status'
               component={DetailComponent} />
           </Switch>
         </div>

@@ -6,17 +6,22 @@ class ChannelComponent extends Component {
 
     constructor(props){
         super(props);
+        
         this.state = {
             value: props.value,
             status: props.status,
-            showButtons: props.showButtons
-        }
+            showButtons: props.showButtons,
+        };
     }
 
     render() {
         let { channel, input, min, max } = this.props;
-        let { value, showButtons } = this.state;
+        let { value, showButtons, status } = this.state;
 
+        if(!status) {
+            status = false;
+        }
+        
         return (
             <div className="channel_component">
 
@@ -24,7 +29,7 @@ class ChannelComponent extends Component {
                     <Link
                         id='channel'
                         className="view_button"
-                        to='/channel'>
+                        to={{ pathname: `/channel/${channel}/${input}/${value}/${status}` }}>
                         
                         <FaIconPackRemoveRedEye
                             style={{
@@ -49,17 +54,15 @@ class ChannelComponent extends Component {
                         onChange={(v) => this.setState({ value: v.target.value})} />
                 </div>
 
-                {showButtons &&
-                    <button className="toggle_on_off_button" onClick={() => this.setState({ status: !this.state.status })}>
-                        {input}
+                <button className="toggle_on_off_button" onClick={() => this.setState({ status: !status })}>
+                    {input}
 
-                        {this.state.status ?
-                            <div className="indicator on"></div>
-                            :
-                            <div className="indicator off"></div>
-                        }
-                    </button>
-                }
+                    {status ?
+                        <div className="indicator on"></div>
+                        :
+                        <div className="indicator off"></div>
+                    }
+                </button>
             </div>
         );
     }

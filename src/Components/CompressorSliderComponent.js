@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import FaIconPackRemoveRedEye from 'react-icons/lib/md/remove-red-eye'
 
 class CompressorSliderComponent extends Component {
 

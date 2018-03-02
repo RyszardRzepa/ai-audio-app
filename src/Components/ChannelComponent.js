@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FaIconPackRemoveRedEye from 'react-icons/lib/md/remove-red-eye'
+import { Link } from 'react-router-dom'
 
 class ChannelComponent extends Component {
 
@@ -7,24 +8,33 @@ class ChannelComponent extends Component {
         super(props);
         this.state = {
             value: props.value,
-            status: props.status
+            status: props.status,
+            showButtons: props.showButtons
         }
     }
 
     render() {
         let { channel, input, min, max } = this.props;
-        let { value } = this.state;
+        let { value, showButtons } = this.state;
 
         return (
             <div className="channel_component">
-                <button className="view_button">
-                    <FaIconPackRemoveRedEye
-                    style={{
-                        padding: 10,
-                        fontSize: 18,
-                        color: '#858585'
-                    }} />
-                </button>
+
+                {showButtons &&
+                    <Link
+                        id='channel'
+                        className="view_button"
+                        to='/channel'>
+                        
+                        <FaIconPackRemoveRedEye
+                            style={{
+                                padding: 10,
+                                fontSize: 18,
+                                color: '#858585'
+                            }} />
+
+                    </Link>
+                }
                 
                 <div className="slider">
                     <div className="channel_number">
@@ -39,15 +49,17 @@ class ChannelComponent extends Component {
                         onChange={(v) => this.setState({ value: v.target.value})} />
                 </div>
 
-                <button className="toggle_on_off_button" onClick={() => this.setState({ status: !this.state.status })}> 
-                    { input }
+                {showButtons &&
+                    <button className="toggle_on_off_button" onClick={() => this.setState({ status: !this.state.status })}>
+                        {input}
 
-                    {this.state.status ?
-                        <div className="indicator on"></div>
-                    :
-                        <div className="indicator off"></div>
-                    }
-                </button>
+                        {this.state.status ?
+                            <div className="indicator on"></div>
+                            :
+                            <div className="indicator off"></div>
+                        }
+                    </button>
+                }
             </div>
         );
     }

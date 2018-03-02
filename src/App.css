@@ -4,7 +4,7 @@ body, html {
     font-family: sans-serif;
     height: 100%;
     background: #6A6A6A;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 button:focus {
@@ -34,6 +34,10 @@ button:focus {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    display: flex;
 }
 
 .toggle_on_off_button {
@@ -192,7 +196,6 @@ input[type=range]:focus {
     border-radius: 5px;
 }
 
-
 .chart2 {
   margin-top: -53px;
   -webkit-transform:rotate(180deg);/*for Chrome and Safari */
@@ -206,4 +209,24 @@ input[type=range]:focus {
     color: #fff;
     font-size: 14px;
     padding-top: 4px;
+}
+.channel-detail {
+    display: flex;
+    margin: 1em;
+}
+
+.eq-compression {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.eq {
+    background: #4a4a4a;
+    margin: 1em;
+}
+
+compression {
+    background: #4a4a4a;
+    margin: 1em;
 }

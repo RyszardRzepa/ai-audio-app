@@ -7,6 +7,7 @@ import SoundWaveComponent from './Components/SoundWaveComponent';
 import ChannelComponent from './Components/ChannelComponent';
 import ChartComponent from './Components/ChartComponent';
 import CompressorSliderComponent from './Components/CompressorSliderComponent';
+import CompressorComponent from './Components/CompressorComponent';
 
 const colors = {
   originalColour: '#6a6a6a',
@@ -44,7 +45,8 @@ class App extends Component {
     return (
       <div className="App">
         <HeaderComponent onStop={this.onStop} onPlay={this.onPlay} />
-        <ChartComponent />
+        <CompressorComponent />
+        {/*<ChartComponent />*/}
         {/*<div>*/}
           {/*<SoundWaveComponent*/}
             {/*play={this.state.playOriginal}*/}

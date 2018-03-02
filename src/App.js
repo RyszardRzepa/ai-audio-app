@@ -40,6 +40,8 @@ class App extends Component {
   };
 
   render() {
+    const { playMixed, playOriginal } = this.state;
+
     return (
       <Router>
         <div className="App">
@@ -49,9 +51,7 @@ class App extends Component {
             <Route
               exact
               path='/'
-              component={MainComponent}
-              playMixed={this.state.playMixed}
-              playOriginal={this.state.playOriginal} />
+              render={routeProps => <MainComponent {...routeProps} playMixed={playMixed} playOriginal={playOriginal}  />}/>
 
             <Route
               exact

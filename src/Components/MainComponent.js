@@ -1,40 +1,23 @@
 import React from 'react';
-import SoundWaveComponent from './SoundWaveComponent';
 import ChannelComponent from './ChannelComponent';
-
-const colors = {
-  originalColour: '#6a6a6a',
-  mixedColour: '#7a59af'
-};
+import WaveHeadComponent from './WaveHeadComponent';
 
 class MainComponent extends React.Component {
   constructor(props){
     super(props)
+
     this.state = {
       playOriginal: props.playOriginal,
       playMixed: props.playMixed,
     }
   }
   render() {
+    debugger
     return (
       <div>
-        <div>
-          <SoundWaveComponent
-            play={this.state.playOriginal}
-            waveColor={colors.originalColour}
-            progressColor='transparent'
-            cursorColor='transparent'
-            url='https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3'/>
-
-          <div style={{ position: 'absolute', top: 100, left: 0, right: 0 }}>
-            <SoundWaveComponent
-              play={this.state.playMixed}
-              waveColor={colors.originalColour}
-              progressColor={colors.mixedColour}
-              cursorColor={colors.mixedColour}
-              url='https://wavesurfer-js.org/example/split-channels/stereo.mp3'/>
-          </div>
-        </div>
+        <WaveHeadComponent
+          playOriginal={this.state.playOriginal}
+          playMixed={this.state.playMixed}/>
 
         <div className="channels">
           <ChannelComponent 

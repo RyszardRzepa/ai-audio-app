@@ -6,11 +6,6 @@ const colors = {
   mixedColour: '#7a59af'
 };
 
-const url = {
-  original: 'https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3',
-  mixed: 'https://wavesurfer-js.org/example/split-channels/stereo.mp3'
-};
-
 class WaveHeadComponent extends Component {
 
   constructor(props) {
@@ -19,8 +14,8 @@ class WaveHeadComponent extends Component {
       playOriginal: props.playOriginal,
       playMixed: props.playMixed,
       url: {
-        original: 'https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3',
-        mixed: 'https://wavesurfer-js.org/example/split-channels/stereo.mp3'
+        original: 'https://firebasestorage.googleapis.com/v0/b/ai-audio-5966c.appspot.com/o/unmixed.wav?alt=media&token=562aacc3-d723-418e-839b-7c708e54efdf',
+        mixed: 'https://firebasestorage.googleapis.com/v0/b/ai-audio-5966c.appspot.com/o/rock.wav?alt=media&token=bff548e8-b1b3-4047-bd7c-3d190961f977'
       }
     }
   }
@@ -28,14 +23,13 @@ class WaveHeadComponent extends Component {
   render() {
     const { playOriginal, playMixed, play } = this.props;
     return (
-      <div>
         <SoundWaveComponent
           mixed={this.props.mixed}
           play={play}
           waveColor={colors.originalColour}
           progressColor={colors.mixedColour}
           cursorColor={colors.mixedColour}/>
-      </div>
+
     );
   }
 }

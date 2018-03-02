@@ -60,7 +60,7 @@ class App extends Component {
             <Route
               exact
               path='/channel/:id/:input/:volume/:status'
-              component={DetailComponent} />
+              render={routeProps => <DetailComponent play={this.state.play} mixed={this.state.mixed}  {...routeProps} />}/>
           </Switch>
         </div>
       </Router>

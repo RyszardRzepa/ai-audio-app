@@ -31,32 +31,33 @@ class DetailComponent extends React.Component {
     const { channel, input, volume, status } = this.state
 
     return (
-      <div className="channel-detail">
-        <div style={{ backgroundColor: 'red'}}>
-          <WaveHeadComponent
-            playOriginal={this.state.playOriginal}
-            playMixed={this.state.playMixed}/>
-        </div>
-
-        <div className="channel-volume">
-          <ChannelComponent
-            channel={channel}
-            hideButtons={true}
-            input={input}
-            min={0}
-            max={100}
-            step="1"
-            value={volume}
-            status={status}/>
-        </div>
-
-        <div className="eq-compression">
-          <div className="eq">
-            <ChartComponent channel={channel}/>
+      <div>
+        <WaveHeadComponent
+          mixed={this.props.mixed}
+          play={this.props.play}
+          playOriginal={this.state.playOriginal}
+          playMixed={this.state.playMixed}/>
+        <div className="channel-detail">
+          <div className="channel-volume">
+            <ChannelComponent
+              channel={channel}
+              hideButtons={true}
+              input={input}
+              min={0}
+              max={100}
+              step="1"
+              value={volume}
+              status={status}/>
           </div>
 
-          <div className="compression">
-            <CompressorComponent/>
+          <div className="eq-compression">
+            <div className="eq">
+              <ChartComponent channel={channel}/>
+            </div>
+
+            <div className="compression">
+              <CompressorComponent/>
+            </div>
           </div>
         </div>
       </div>

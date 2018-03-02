@@ -212,7 +212,6 @@ input[type=range]:focus {
 .channel-detail {
     display: flex;
     margin: 1em;
-    margin-top: 10em;
 }
 
 .eq-compression {

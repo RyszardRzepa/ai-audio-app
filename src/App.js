@@ -4,34 +4,31 @@ import './App.css';
 import 'wavesurfer.js';
 
 import HeaderComponent from './Components/HeaderComponent';
+import ChannelComponent from './Components/ChannelComponent';
+import ChartComponent from './Components/ChartComponent';
+import CompressorSliderComponent from './Components/CompressorSliderComponent';
+import CompressorComponent from './Components/CompressorComponent';
 import MainComponent from './Components/MainComponent';
 import DetailComponent from './Components/DetailComponent';
 
+const colors = {
+  originalColour: '#6a6a6a',
+  mixedColour: '#7a59af'
+};
+
+
 class App extends Component {
   state = {
-    playOriginal: false,
-    playMixed: false,
-    selectedChannel: -1
+    mixed: false,
+    selectedChannel: -1,
+    play: false,
   };
 
-  onPlay = (original) => {
-    if(original){
-      this.setState({
-        playOriginal: true,
-        playMixed: false
-      })
-    }else{
-      this.setState({
-        playOriginal: false,
-        playMixed: true
-      })
-    }
-  };
 
-  onStop = () => {
+  handleMixed = (val) => {
+    console.log('val mixed', val)
     this.setState({
-      playOriginal: false,
-      playMixed: false
+      mixed: val,
     })
   };
 
@@ -39,19 +36,26 @@ class App extends Component {
     this.setState({ selectedChannel: channel })
   };
 
+  handlePlay = (val) => {
+    this.setState({
+      play: val
+    });
+  }
+
+
+
   render() {
+    const { playMixed, playOriginal } = this.state;
     return (
       <Router>
         <div className="App">
-          <HeaderComponent onStop={this.onStop} onPlay={this.onPlay} />
-          
+          <HeaderComponent handlePlay={this.handlePlay} handleMixed={this.handleMixed} />
+
           <Switch>
             <Route
               exact
               path='/'
-              component={MainComponent}
-              playMixed={this.state.playMixed}
-              playOriginal={this.state.playOriginal} />
+              render={routeProps => <MainComponent play={this.state.play} mixed={this.state.mixed}  {...routeProps} />}/>
 
             <Route
               exact
@@ -59,7 +63,7 @@ class App extends Component {
               component={DetailComponent} />
           </Switch>
         </div>
-      </Router>      
+      </Router>
     );
   }
 }

@@ -1,11 +1,6 @@
 import React from 'react';
-import SoundWaveComponent from './SoundWaveComponent';
 import ChannelComponent from './ChannelComponent';
-
-const colors = {
-  originalColour: '#6a6a6a',
-  mixedColour: '#7a59af'
-};
+import WaveHeadComponent from './WaveHeadComponent';
 
 class MainComponent extends React.Component {
   constructor(props){
@@ -18,33 +13,21 @@ class MainComponent extends React.Component {
   render() {
     return (
       <div>
-        <div>
-          <SoundWaveComponent
-            play={this.state.playOriginal}
-            waveColor={colors.originalColour}
-            progressColor='transparent'
-            cursorColor='transparent'
-            url='https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3'/>
-
-          <div style={{ position: 'absolute', top: 100, left: 0, right: 0 }}>
-            <SoundWaveComponent
-              play={this.state.playMixed}
-              waveColor={colors.originalColour}
-              progressColor={colors.mixedColour}
-              cursorColor={colors.mixedColour}
-              url='https://wavesurfer-js.org/example/split-channels/stereo.mp3'/>
-          </div>
-        </div>
+        <WaveHeadComponent
+          mixed={this.props.mixed}
+          play={this.props.play}
+          playOriginal={this.state.playOriginal}
+          playMixed={this.state.playMixed}/>
 
         <div className="channels">
           <ChannelComponent 
             showButtons={true}
             channel = { 1 } 
-            input = "Snare Drum"
+            input= "Floor Tom"
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 70 }
+            value = { 96 }
             status={true}/>
           <ChannelComponent 
             showButtons={true}
@@ -53,12 +36,12 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 50 }
+            value = { 30 }
             status={true}/>
           <ChannelComponent 
             showButtons={true}
             channel = { 3 } 
-            input = "Tom Drum"
+            input = "Bass Drum"
             min = { 0 }
             max = { 100 }
             step="1"
@@ -67,35 +50,39 @@ class MainComponent extends React.Component {
           <ChannelComponent 
             showButtons={true}
             channel = { 4 } 
-            input = "Kick Drum"
+            input = "Overhead"
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 30 }/>
+            value = { 98 }
+            status={true} />
           <ChannelComponent 
             showButtons={true}
             channel = { 5 } 
-            input = "Ride Cymbal"
+            input = "Snare"
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 40 }/>
+            value = { 40 }
+            status={true}/>
           <ChannelComponent 
             showButtons={true}
             channel = { 6 } 
-            input = "Crash Cymbal"
+            input = "Bass Drum"
             min = { 0 }
-            max = { 100 }
+            max = { 21 }
             step="1"
-            value = { 30 }/>
+            value = { 30 }
+            status={true} />
           <ChannelComponent 
             showButtons={true}
             channel = { 7 } 
-            input = "Cowbell"
+            input = "Rack Tom"
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 100 }/>
+            value = { 0 }
+            status={true} />
           <ChannelComponent 
             showButtons={true}
             channel = { 8 } 

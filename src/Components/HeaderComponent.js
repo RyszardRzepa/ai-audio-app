@@ -13,18 +13,6 @@ class HeaderComonent extends React.Component {
     showBack: true
   };
 
-  handlePlay(playing){
-    this.setState({
-      playing: playing
-    });
-
-    if(playing){
-      this.props.onPlay(this.state.original);
-    }else{
-      this.props.onStop();
-    }
-  }
-
   render() {
     return (
       <div style={{
@@ -86,11 +74,17 @@ class HeaderComonent extends React.Component {
 
           <FaIconPack
             className={'menu_icon ' + (this.state.playing ? 'selected_play_option' : '')}
-            onClick={() => this.handlePlay(true)}/>
+            onClick={() => {
+              this.setState({ playing: true })
+              this.props.handlePlay(true)
+            }}/>
 
           <FaIconPackSquare 
             className={'menu_icon ' + (this.state.playing ? '' : 'selected_play_option')}
-            onClick={() => this.handlePlay(false)}/>
+            onClick={() => {
+              this.setState({ playing: false });
+              this.props.handlePlay(false)
+            }}/>
 
           <FaIconPackFolder 
             className="menu_icon" />

@@ -5,7 +5,6 @@ import WaveHeadComponent from './WaveHeadComponent';
 class MainComponent extends React.Component {
   constructor(props){
     super(props)
-    console.log('props', props)
     this.state = {
       playOriginal: props.playOriginal,
       playMixed: props.playMixed,
@@ -15,6 +14,7 @@ class MainComponent extends React.Component {
     return (
       <div>
         <WaveHeadComponent
+          play={this.props.play}
           playOriginal={this.state.playOriginal}
           playMixed={this.state.playMixed}/>
 

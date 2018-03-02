@@ -21,7 +21,8 @@ class App extends Component {
   state = {
     playOriginal: false,
     playMixed: false,
-    selectedChannel: -1
+    selectedChannel: -1,
+    play: false,
   };
 
   onPlay = (original) => {
@@ -45,22 +46,37 @@ class App extends Component {
     })
   };
 
+  handleMixed = () => {
+    this.setState({
+      playOriginal: false,
+      playMixed: false
+    })
+  };
+
   onChannelSelect = (channel) => {
     this.setState({ selectedChannel: channel })
   };
+
+  handlePlay = (val) => {
+    this.setState({
+      play: val
+    });
+  }
+
+
 
   render() {
     const { playMixed, playOriginal } = this.state;
     return (
       <Router>
         <div className="App">
-          <HeaderComponent onStop={this.onStop} onPlay={this.onPlay} />
+          <HeaderComponent handlePlay={this.handlePlay} onStop={this.onStop} onPlay={this.onPlay} />
 
           <Switch>
             <Route
               exact
               path='/'
-              render={routeProps => <MainComponent {...routeProps} playMixed={playMixed} playOriginal={playOriginal}  />}/>
+              render={routeProps => <MainComponent play={this.state.play}  {...routeProps} playMixed={playMixed} playOriginal={playOriginal}  />}/>
 
             <Route
               exact

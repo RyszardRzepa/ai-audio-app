@@ -17,12 +17,11 @@ class WaveHeadComponent extends Component {
         }
     }
     render() {
-        const { playOriginal, playMixed } = this.state;
-        console.log('wave', this.props)
+        const { playOriginal, playMixed, play } = this.props;
         return (
             <div>
                 <SoundWaveComponent
-                    play={playOriginal}
+                    play={play}
                     waveColor={colors.originalColour}
                     progressColor='transparent'
                     cursorColor='transparent'
@@ -30,7 +29,7 @@ class WaveHeadComponent extends Component {
 
                 <div style={{ position: 'absolute', top: 100, left: 0, right: 0 }}>
                     <SoundWaveComponent
-                        play={playMixed}
+                        play={play}
                         waveColor={colors.originalColour}
                         progressColor={colors.mixedColour}
                         cursorColor={colors.mixedColour}

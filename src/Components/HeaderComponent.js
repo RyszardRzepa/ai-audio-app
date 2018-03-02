@@ -59,12 +59,18 @@ class HeaderComonent extends React.Component {
 
             <div 
               className={'rightButton ' + (this.state.original ? 'selected' : '')}
-              onClick={() => this.setState({original: true})}>
+              onClick={() => {
+                this.props.handleMixed(false)
+                this.setState({original: true})
+              }}>
               Original
             </div>
             <div 
               className={'leftButton ' + (this.state.original ? '' : 'selected')}
-              onClick={() => this.setState({original: false})}>
+              onClick={() => {
+                this.props.handleMixed(true)
+                this.setState({original: false})
+              }}>
               Mixed
             </div>
 

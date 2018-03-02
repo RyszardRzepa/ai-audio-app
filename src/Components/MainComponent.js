@@ -14,6 +14,7 @@ class MainComponent extends React.Component {
     return (
       <div>
         <WaveHeadComponent
+          mixed={this.props.mixed}
           play={this.props.play}
           playOriginal={this.state.playOriginal}
           playMixed={this.state.playMixed}/>

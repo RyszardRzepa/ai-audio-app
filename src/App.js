@@ -19,37 +19,16 @@ const colors = {
 
 class App extends Component {
   state = {
-    playOriginal: false,
-    playMixed: false,
+    mixed: false,
     selectedChannel: -1,
     play: false,
   };
 
-  onPlay = (original) => {
-    if(original){
-      this.setState({
-        playOriginal: true,
-        playMixed: false
-      })
-    }else{
-      this.setState({
-        playOriginal: false,
-        playMixed: true
-      })
-    }
-  };
 
-  onStop = () => {
+  handleMixed = (val) => {
+    console.log('val mixed', val)
     this.setState({
-      playOriginal: false,
-      playMixed: false
-    })
-  };
-
-  handleMixed = () => {
-    this.setState({
-      playOriginal: false,
-      playMixed: false
+      mixed: val,
     })
   };
 
@@ -70,13 +49,13 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <HeaderComponent handlePlay={this.handlePlay} onStop={this.onStop} onPlay={this.onPlay} />
+          <HeaderComponent handlePlay={this.handlePlay} handleMixed={this.handleMixed} />
 
           <Switch>
             <Route
               exact
               path='/'
-              render={routeProps => <MainComponent play={this.state.play}  {...routeProps} playMixed={playMixed} playOriginal={playOriginal}  />}/>
+              render={routeProps => <MainComponent play={this.state.play} mixed={this.state.mixed}  {...routeProps} />}/>
 
             <Route
               exact

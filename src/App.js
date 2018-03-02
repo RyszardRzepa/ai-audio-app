@@ -5,7 +5,6 @@ import 'wavesurfer.js';
 import HeaderComponent from './Components/HeaderComponent';
 import SoundWaveComponent from './Components/SoundWaveComponent';
 import ChannelComponent from './Components/ChannelComponent';
-import CompressorSliderComponent from './Components/CompressorSliderComponent';
 
 
 const colors = {

@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1379fd0-c04a-4f1f-baae-249808789f55" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/rock.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/unmixed.wav" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HeaderComponent.js" afterPath="$PROJECT_DIR$/src/Components/HeaderComponent.js" />
-      <change beforePath="$PROJECT_DIR$/src/Components/MainComponent.js" afterPath="$PROJECT_DIR$/src/Components/MainComponent.js" />
-      <change beforePath="$PROJECT_DIR$/src/Components/SoundWaveComponent.js" afterPath="$PROJECT_DIR$/src/Components/SoundWaveComponent.js" />
-      <change beforePath="$PROJECT_DIR$/src/Components/WaveHeadComponent.js" afterPath="$PROJECT_DIR$/src/Components/WaveHeadComponent.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SoundWaveComponent.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SoundWaveComponent.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/SoundWaveComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+            <state relative-caret-position="148">
+              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -47,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WaveHeadComponent.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/WaveHeadComponent.js">
+      <file leaf-file-name="DetailComponent.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Components/DetailComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="23" column="7" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="23" selection-end-column="7" />
+            <state relative-caret-position="98">
+              <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -150,6 +143,17 @@
               <item name="ai-audio" type="b2602c69:ProjectViewProjectNode" />
               <item name="ai-audio" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ai-audio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ai-audio" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ai-audio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ai-audio" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -196,12 +200,12 @@
       <option name="presentableId" value="Default" />
       <updated>1519897981944</updated>
       <workItem from="1519897983119" duration="15649000" />
-      <workItem from="1519979399835" duration="11481000" />
+      <workItem from="1519979399835" duration="11588000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27130000" />
+    <option name="totallyTimeSpent" value="27237000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -464,16 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/DetailComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-wavesurfer/lib/react-wavesurfer.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -516,14 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/WaveHeadComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="23" column="7" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="23" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -560,11 +546,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/SoundWaveComponent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        <state relative-caret-position="148">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/WaveHeadComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/DetailComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

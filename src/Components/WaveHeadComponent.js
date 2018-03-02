@@ -18,7 +18,7 @@ class WaveHeadComponent extends Component {
     }
     render() {
         const { playOriginal, playMixed } = this.state;
-        console.log('wave', this.props)
+        
         return (
             <div>
                 <SoundWaveComponent

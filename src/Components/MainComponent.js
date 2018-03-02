@@ -26,7 +26,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 70 }
+            value = { 96 }
             status={true}/>
           <ChannelComponent 
             showButtons={true}
@@ -35,7 +35,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 50 }
+            value = { 30 }
             status={true}/>
           <ChannelComponent 
             showButtons={true}
@@ -53,7 +53,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 30 }
+            value = { 98 }
             status={true} />
           <ChannelComponent 
             showButtons={true}
@@ -69,7 +69,7 @@ class MainComponent extends React.Component {
             channel = { 6 } 
             input = "Bass Drum"
             min = { 0 }
-            max = { 100 }
+            max = { 21 }
             step="1"
             value = { 30 }
             status={true} />
@@ -80,7 +80,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 100 }
+            value = { 0 }
             status={true} />
           <ChannelComponent 
             showButtons={true}

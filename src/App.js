@@ -44,25 +44,24 @@ class App extends Component {
     return (
       <div className="App">
         <HeaderComponent onStop={this.onStop} onPlay={this.onPlay} />
-        {/*<ChartComponent />*/}
-        <div>
-          <SoundWaveComponent
-            play={this.state.playOriginal}
-            waveColor={colors.originalColour}
-            progressColor='transparent'
-            cursorColor='transparent'
-            url='https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3'/>
+        <ChartComponent />
+        {/*<div>*/}
+          {/*<SoundWaveComponent*/}
+            {/*play={this.state.playOriginal}*/}
+            {/*waveColor={colors.originalColour}*/}
+            {/*progressColor='transparent'*/}
+            {/*cursorColor='transparent'*/}
+            {/*url='https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3'/>*/}
 
-          <div style={{ position: 'absolute', top: 100, left: 0, right: 0 }}>
-            <SoundWaveComponent
-              play={this.state.playMixed}
-              waveColor={colors.originalColour}
-              progressColor={colors.mixedColour}
-              cursorColor={colors.mixedColour}
-              url='https://wavesurfer-js.org/example/split-channels/stereo.mp3'/>
-          </div>
-          
-        </div>
+          {/*<div style={{ position: 'absolute', top: 100, left: 0, right: 0 }}>*/}
+            {/*<SoundWaveComponent*/}
+              {/*play={this.state.playMixed}*/}
+              {/*waveColor={colors.originalColour}*/}
+              {/*progressColor={colors.mixedColour}*/}
+              {/*cursorColor={colors.mixedColour}*/}
+              {/*url='https://wavesurfer-js.org/example/split-channels/stereo.mp3'/>*/}
+          {/*</div>*/}
+        {/*</div>*/}
         <div className="channels">
           <ChannelComponent 
             channel = { 1 } 

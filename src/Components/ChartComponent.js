@@ -1,6 +1,17 @@
 import React from 'react';
 import { Line as LineChart } from 'react-chartjs';
 
+const zero = {
+  labels: ['', ''],
+  datasets: [
+    {
+      radius: 0,
+      fillColor: "#7a59af",
+      data: [1.0, 1.0],
+    }
+  ]
+};
+
 const floorTom = {
   labels: Array(100).join(".").split("."),
   datasets: [
@@ -88,37 +99,48 @@ export default class ChartComponent extends React.Component {
     super(props)
 
     this.state = {
-      channel: props.channel
+      channel: props.channel,
+      mixed: props.mixed
     }
+  }
+
+  componentWillReceiveProps(nextProps) { 
+    this.setState({
+      channel: nextProps.channel,
+      mixed: nextProps.mixed
+    })
   }
   
   render() {
     var width = window.innerWidth - 200;
 
-    let chartData = floorTom
-
-    switch(this.state.channel){
-      case '1':
-        chartData = floorTom
-      break;
-      case '2':
-        chartData = hHat
+    let chartData = zero
+    if (this.state.mixed) {
+      switch(this.state.channel){
+        case '1':
+          chartData = floorTom
         break;
-      case '3':
-        chartData = bDrum
-        break;
-      case '4':
-        chartData = overhead
-        break;
-      case '5':
-        chartData = snare
-        break;
-      case '6':
-        chartData = bassD
-      case '7':
-        chartData = rackTom
-        break;
+        case '2':
+          chartData = hHat
+          break;
+        case '3':
+          chartData = bDrum
+          break;
+        case '4':
+          chartData = overhead
+          break;
+        case '5':
+          chartData = snare
+          break;
+        case '6':
+          chartData = bassD
+          break;
+        case '7':
+          chartData = rackTom
+          break;
+      }
     }
+    
     return (
       <div>
         <div className="yAxis">

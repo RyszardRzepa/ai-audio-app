@@ -28,7 +28,7 @@ class DetailComponent extends React.Component {
 
   render() {
 
-    const { channel, input, volume, status } = this.state
+    const { channel, input, volume, status, playMixed } = this.state
 
     return (
       <div className="channel-detail">
@@ -45,14 +45,14 @@ class DetailComponent extends React.Component {
             input={input}
             min={0}
             max={100}
+            mixed={playMixed}
             step="1"
-            value={volume}
             status={status}/>
         </div>
 
         <div className="eq-compression">
           <div className="eq">
-            <ChartComponent channel={channel}/>
+            <ChartComponent channel={channel} mixed={playMixed}/>
           </div>
 
           <div className="compression">

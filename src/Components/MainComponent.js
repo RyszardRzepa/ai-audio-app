@@ -27,7 +27,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 96 }
+            mixed = {this.props.mixed}
             status={true}/>
           <ChannelComponent 
             showButtons={true}
@@ -36,7 +36,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 30 }
+            mixed = {this.props.mixed}
             status={true}/>
           <ChannelComponent 
             showButtons={true}
@@ -45,7 +45,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 10 }
+            mixed = {this.props.mixed}
             status={true}/>
           <ChannelComponent 
             showButtons={true}
@@ -54,7 +54,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 98 }
+            mixed = {this.props.mixed}
             status={true} />
           <ChannelComponent 
             showButtons={true}
@@ -63,7 +63,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 40 }
+            mixed = {this.props.mixed}
             status={true}/>
           <ChannelComponent 
             showButtons={true}
@@ -72,7 +72,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 21 }
             step="1"
-            value = { 30 }
+            mixed = {this.props.mixed}
             status={true} />
           <ChannelComponent 
             showButtons={true}
@@ -81,7 +81,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 0 }
+            mixed = {this.props.mixed}
             status={true} />
           <ChannelComponent 
             showButtons={true}
@@ -90,7 +90,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 0 }/>
+            mixed = {this.props.mixed}/>
           <ChannelComponent 
             showButtons={true}
             channel = { 9 } 
@@ -98,7 +98,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 0 }/>
+            mixed = {this.props.mixed}/>
           <ChannelComponent
             showButtons={true}
             channel={ 10 }
@@ -106,7 +106,7 @@ class MainComponent extends React.Component {
             min={0}
             max={100}
             step="1"
-            value={0} />
+            mixed = {this.props.mixed} />
         </div>
       </div>
     )

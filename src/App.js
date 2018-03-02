@@ -26,7 +26,6 @@ class App extends Component {
 
 
   handleMixed = (val) => {
-    console.log('val mixed', val)
     this.setState({
       mixed: val,
     })
@@ -59,8 +58,8 @@ class App extends Component {
 
             <Route
               exact
-              path='/channel/:id/:input/:volume/:status'
-              component={DetailComponent} />
+              path='/channel/:channel/:input/:volume/:status'
+              render={routeProps => <DetailComponent play={this.state.play} mixed={this.state.mixed} {...routeProps} />}/>
           </Switch>
         </div>
       </Router>

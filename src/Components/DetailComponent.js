@@ -17,6 +17,7 @@ class DetailComponent extends React.Component {
     urlInput = urlInput.replace(new RegExp('%20', 'g'), ' ');
 
     this.state = {
+      channel: props.channel,
       volume: urlVolume,
       channel: urlID,
       input: urlInput,
@@ -26,37 +27,45 @@ class DetailComponent extends React.Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) { 
+    this.setState({
+      // channel: nextProps.channel,
+      mixed: nextProps.mixed
+    })
+  }
+
   render() {
 
     const { channel, input, volume, status, playMixed } = this.state
 
     return (
-      <div className="channel-detail">
-        <div style={{ backgroundColor: 'red'}}>
-          <WaveHeadComponent
-            playOriginal={this.state.playOriginal}
-            playMixed={this.state.playMixed}/>
-        </div>
-
-        <div className="channel-volume">
-          <ChannelComponent
-            channel={channel}
-            hideButtons={true}
-            input={input}
-            min={0}
-            max={100}
-            mixed={playMixed}
-            step="1"
-            status={status}/>
-        </div>
-
-        <div className="eq-compression">
-          <div className="eq">
-            <ChartComponent channel={channel} mixed={playMixed}/>
+      <div>
+        <WaveHeadComponent
+          mixed={this.props.mixed}
+          play={this.props.play}
+          playOriginal={this.state.playOriginal}
+          playMixed={this.state.playMixed}/>
+        <div className="channel-detail">
+          <div className="channel-volume">
+            <ChannelComponent
+              channel={channel}
+              hideButtons={true}
+              input={input}
+              min={0}
+              max={100}
+              step="1"
+              mixed={this.props.mixed}
+              status={status}/>
           </div>
 
-          <div className="compression">
-            <CompressorComponent/>
+          <div className="eq-compression">
+            <div className="eq">
+              <ChartComponent channel={channel} mixed={this.props.mixed}/>
+            </div>
+
+            <div className="compression">
+              <CompressorComponent/>
+            </div>
           </div>
         </div>
       </div>

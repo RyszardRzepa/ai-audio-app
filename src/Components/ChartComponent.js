@@ -2,12 +2,12 @@ import React from 'react';
 import { Line as LineChart } from 'react-chartjs';
 
 const zero = {
-  labels: ['', ''],
+  labels: Array(100).join(".").split("."),
   datasets: [
     {
       radius: 0,
       fillColor: "#7a59af",
-      data: [1.0, 1.0],
+      data: Array.apply(null, Array(100)).map(Number.prototype.valueOf,1),
     }
   ]
 };

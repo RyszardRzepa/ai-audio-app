@@ -3,13 +3,13 @@ import FaIconPackRemoveRedEye from 'react-icons/lib/md/remove-red-eye'
 import { Link } from 'react-router-dom'
 
 const zero = 50
-const floorTom = 50+(50*-0.019515865678277677)
-const hHat = 50+(50*-0.12915695245804137)
-const bDrum = 50+(50*0.02234711094073738)
-const overhead = 50+(50*0.3787342423532589)
-const snare = 50+(50*-0.02446831985537301)
-const bassD = 50+(50*-0.196680429519688)
-const rackTom = 50+(50*-0.07297467173392569)
+const floorTom = 50+(100*-0.019515865678277677)
+const hHat = 50+(100*-0.12915695245804137)
+const bDrum = 50+(100*0.02234711094073738)
+const overhead = 50+(100*0.3787342423532589)
+const snare = 50+(100*-0.02446831985537301)
+const bassD = 50+(100*-0.196680429519688)
+const rackTom = 50+(100*-0.07297467173392569)
 
 class ChannelComponent extends Component {
 
@@ -17,14 +17,16 @@ class ChannelComponent extends Component {
         super(props);
         
         this.state = {
-            status: props.status,
-            showButtons: props.showButtons,
+          channel: props.channel,
+          status: props.status,
+          showButtons: props.showButtons,
+          mixed: props.mixed
         };
     }
 
     componentWillReceiveProps(nextProps) { 
       this.setState({
-        channel: nextProps.channel,
+        // channel: nextProps.channel,
         mixed: nextProps.mixed
       })
     }
@@ -37,33 +39,34 @@ class ChannelComponent extends Component {
             status = false;
         }
 
-        let volume = zero
+        var volume = zero
         if (this.state.mixed) {
-          switch(this.state.channel){
-            case '1':
+          switch(parseInt(this.state.channel)) {
+            case 1:
               volume = floorTom
-            break;
-            case '2':
+              break;
+            case 2:
               volume = hHat
               break;
-            case '3':
+            case 3:
               volume = bDrum
               break;
-            case '4':
+            case 4:
               volume = overhead
               break;
-            case '5':
+            case 5:
               volume = snare
               break;
-            case '6':
+            case 6:
               volume = bassD
               break;
-            case '7':
+            case 7:
               volume = rackTom
               break;
           }
         }
-        console.log(volume, this.state.mixed, this.state.channel, floorTom)
+
+        console.log(this.state.channel, this.state.mixed, volume)
         
         return (
             <div className="channel_component">

@@ -70,10 +70,10 @@ class MainComponent extends React.Component {
             channel = { 6 } 
             input = "Bass Drum"
             min = { 0 }
-            max = { 21 }
+            max = { 100 }
             step="1"
             mixed = {this.props.mixed}
-            status={true} />
+            status={true}/>
           <ChannelComponent 
             showButtons={true}
             channel = { 7 } 

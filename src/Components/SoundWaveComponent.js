@@ -11,8 +11,8 @@ class SoundWaveComponent extends Component {
       playing: false,
       pos: 0,
       url: {
-        original: 'https://firebasestorage.googleapis.com/v0/b/ai-audio-5966c.appspot.com/o/unmixed.wav?alt=media&token=562aacc3-d723-418e-839b-7c708e54efdf',
-        mixed: 'https://firebasestorage.googleapis.com/v0/b/ai-audio-5966c.appspot.com/o/rock.wav?alt=media&token=bff548e8-b1b3-4047-bd7c-3d190961f977'
+        mixed: 'https://firebasestorage.googleapis.com/v0/b/ai-audio-5966c.appspot.com/o/unmixed.wav?alt=media&token=562aacc3-d723-418e-839b-7c708e54efdf',
+        original: 'https://firebasestorage.googleapis.com/v0/b/ai-audio-5966c.appspot.com/o/rock.wav?alt=media&token=bff548e8-b1b3-4047-bd7c-3d190961f977'
       }
     };
 

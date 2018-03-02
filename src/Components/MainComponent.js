@@ -22,7 +22,7 @@ class MainComponent extends React.Component {
           <ChannelComponent 
             showButtons={true}
             channel = { 1 } 
-            input = "Snare Drum"
+            input= "Floor Tom"
             min = { 0 }
             max = { 100 }
             step="1"
@@ -40,7 +40,7 @@ class MainComponent extends React.Component {
           <ChannelComponent 
             showButtons={true}
             channel = { 3 } 
-            input = "Tom Drum"
+            input = "Bass Drum"
             min = { 0 }
             max = { 100 }
             step="1"
@@ -49,35 +49,39 @@ class MainComponent extends React.Component {
           <ChannelComponent 
             showButtons={true}
             channel = { 4 } 
-            input = "Kick Drum"
+            input = "Overhead"
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 30 }/>
+            value = { 30 }
+            status={true} />
           <ChannelComponent 
             showButtons={true}
             channel = { 5 } 
-            input = "Ride Cymbal"
+            input = "Snare"
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 40 }/>
+            value = { 40 }
+            status={true}/>
           <ChannelComponent 
             showButtons={true}
             channel = { 6 } 
-            input = "Crash Cymbal"
+            input = "Bass Drum"
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 30 }/>
+            value = { 30 }
+            status={true} />
           <ChannelComponent 
             showButtons={true}
             channel = { 7 } 
-            input = "Cowbell"
+            input = "Rack Tom"
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 100 }/>
+            value = { 100 }
+            status={true} />
           <ChannelComponent 
             showButtons={true}
             channel = { 8 } 

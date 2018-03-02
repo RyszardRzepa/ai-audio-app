@@ -50,3 +50,12 @@
   padding: 10px;
   border-radius: 5px;
 }
+
+.chart2 {
+  margin-left: 45px;
+  margin-top: -53px;
+  -webkit-transform:rotate(180deg);/*for Chrome and Safari */
+  -ms-transform:rotate(180deg);/*for IE9*/
+  -moz-transform:rotate(180deg);/*for Firefox*/
+  -o-transform:rotate(180deg);/*for Opera*/
+}

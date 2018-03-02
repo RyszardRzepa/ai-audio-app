@@ -4,7 +4,7 @@ body, html {
     font-family: sans-serif;
     height: 100%;
     background: #6A6A6A;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .SoundWaveComponent {

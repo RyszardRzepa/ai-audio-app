@@ -1,14 +1,26 @@
 import React from 'react';
 import FaIconPack from 'react-icons/lib/fa/play'
-import FaIconPackPause from 'react-icons/lib/fa/pause'
 import FaIconPackSquare from 'react-icons/lib/fa/square'
 import FaIconPackFolder from 'react-icons/lib/md/create-new-folder'
 import FaIconPackFace from 'react-icons/lib/md/face'
 
 class HeaderComonent extends React.Component {
   state = {
-    play: false,
+    original: true,
+    playing: false
   };
+
+  handlePlay(playing){
+    this.setState({
+      playing: playing
+    });
+
+    if(playing){
+      this.props.onPlay(this.state.original);
+    }else{
+      this.props.onStop();
+    }
+  }
 
   render() {
     return (
@@ -31,6 +43,7 @@ class HeaderComonent extends React.Component {
             <p style={{ color: '#858585', paddingRight: 5 }}>Hey, I see the input genre is</p> <p
             style={{ color: '#adadad', fontWeight: 'bold' }}> Rock</p>
           </div>
+
           <div style={{
             display: 'flex',
             flexDirection: 'row',
@@ -40,39 +53,36 @@ class HeaderComonent extends React.Component {
             borderRadius: 5,
             cursor: 'pointer'
           }}>
-            <div className='rightButton'>
+
+            <div 
+              className={'rightButton ' + (this.state.original ? 'selected' : '')}
+              onClick={() => this.setState({original: true})}>
               Original
             </div>
-            <div className='leftButton'>
+            <div 
+              className={'leftButton ' + (this.state.original ? '' : 'selected')}
+              onClick={() => this.setState({original: false})}>
               Mixed
             </div>
+
           </div>
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingRight: 10 }}>
+
           <FaIconPack
-            className="button"
-            onClick={() => this.props.onPlay(!this.state.play)}
-            style={{
-              padding: 10,
-              fontSize: 30,
-              color: '#7a59af',
-              cursor: 'pointer'
-            }}/>
-          <FaIconPackPause className="button"  style={styles.iconStyle}onClick={() => this.props.onPlay(!this.state.play)}/>
-          <FaIconPackSquare className="button" style={styles.iconStyle} />
-          <FaIconPackFolder className="button" style={styles.iconStyle}/>
+            className={'menu_icon ' + (this.state.playing ? 'selected_play_option' : '')}
+            onClick={() => this.handlePlay(true)}/>
+
+          <FaIconPackSquare 
+            className={'menu_icon ' + (this.state.playing ? '' : 'selected_play_option')}
+            onClick={() => this.handlePlay(false)}/>
+
+          <FaIconPackFolder 
+            className="menu_icon" />
+
         </div>
       </div>
     )
-  }
-};
-
-const styles = {
-  iconStyle: {
-    padding: 10,
-    fontSize: 30,
-    color: '#858585',
-    cursor: 'pointer'
   }
 };
 

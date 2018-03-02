@@ -6,7 +6,8 @@ class ChannelComponent extends Component {
     constructor(props){
         super(props);
         this.state = {
-            value: props.value
+            value: props.value,
+            status: props.status
         }
     }
 
@@ -15,7 +16,7 @@ class ChannelComponent extends Component {
         let { value } = this.state;
 
         return (
-            <div className="ChannelComponent">
+            <div className="channel_component">
                 <button className="view_button">
                     <FaIconPackRemoveRedEye
                     style={{
@@ -38,9 +39,14 @@ class ChannelComponent extends Component {
                         onChange={(v) => this.setState({ value: v.target.value})} />
                 </div>
 
-                <button className="toggle_on_off_button"> 
+                <button className="toggle_on_off_button" onClick={() => this.setState({ status: !this.state.status })}> 
                     { input }
-                    <div className="indicator"></div>
+
+                    {this.state.status ?
+                        <div className="indicator on"></div>
+                    :
+                        <div className="indicator off"></div>
+                    }
                 </button>
             </div>
         );

@@ -5,16 +5,17 @@ import WaveHeadComponent from './WaveHeadComponent';
 class MainComponent extends React.Component {
   constructor(props){
     super(props)
-    console.log('props', props)
     this.state = {
       playOriginal: props.playOriginal,
-      playMixed: props.playMixed,
+      playMixed: props.playMixed
     }
   }
   render() {
     return (
       <div>
         <WaveHeadComponent
+          mixed={this.props.mixed}
+          play={this.props.play}
           playOriginal={this.state.playOriginal}
           playMixed={this.state.playMixed}/>
 
@@ -26,7 +27,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 96 }
+            volume = { 96 }
             status={true}/>
           <ChannelComponent 
             showButtons={true}
@@ -35,7 +36,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 30 }
+            volume = { 30 }
             status={true}/>
           <ChannelComponent 
             showButtons={true}
@@ -44,7 +45,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 10 }
+            volume = { 10 }
             status={true}/>
           <ChannelComponent 
             showButtons={true}
@@ -53,7 +54,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 98 }
+            volume = { 98 }
             status={true} />
           <ChannelComponent 
             showButtons={true}
@@ -62,7 +63,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 40 }
+            volume = { 40 }
             status={true}/>
           <ChannelComponent 
             showButtons={true}
@@ -71,7 +72,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 21 }
             step="1"
-            value = { 30 }
+            volume = { 30 }
             status={true} />
           <ChannelComponent 
             showButtons={true}
@@ -80,7 +81,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 0 }
+            volume = { 0 }
             status={true} />
           <ChannelComponent 
             showButtons={true}
@@ -89,7 +90,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 0 }/>
+            volume = { 0 }/>
           <ChannelComponent 
             showButtons={true}
             channel = { 9 } 
@@ -97,7 +98,7 @@ class MainComponent extends React.Component {
             min = { 0 }
             max = { 100 }
             step="1"
-            value = { 0 }/>
+            volume = { 0 }/>
           <ChannelComponent
             showButtons={true}
             channel={ 10 }
@@ -105,7 +106,7 @@ class MainComponent extends React.Component {
             min={0}
             max={100}
             step="1"
-            value={0} />
+            volume={0} />
         </div>
       </div>
     )

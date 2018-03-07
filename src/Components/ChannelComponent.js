@@ -8,10 +8,20 @@ class ChannelComponent extends Component {
         super(props);
         
         this.state = {
-            value: props.value,
+            value: 0,
             status: props.status,
             showButtons: props.showButtons,
+            volume: props.volume
         };
+
+        // var interval = setInterval(() => {
+        //     this.setState({ value: this.state.value += 1 })
+
+        //     console.log(this.state.value, this.state.volume)
+        //     if (this.state.value == this.state.volume) {
+        //         clearInterval(interval);
+        //     }
+        // }, 80);
     }
 
     render() {
@@ -21,7 +31,7 @@ class ChannelComponent extends Component {
         if(!status) {
             status = false;
         }
-        
+    
         return (
             <div className="channel_component">
 

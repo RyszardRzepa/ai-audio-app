@@ -50,7 +50,7 @@ class DetailComponent extends React.Component {
 
         <div className="eq-compression">
           <div className="eq">
-            <ChartComponent channel={channel}/>
+            <ChartComponent/>
           </div>
 
           <div className="compression">
